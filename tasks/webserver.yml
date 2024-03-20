@@ -1,0 +1,29 @@
+---
+  - name: Install php
+    dnf:
+      name: php 
+      state: latest
+
+  - name: Install httpd
+    yum:
+      name: httpd 
+      state: latest
+
+
+  - name: Start httpd server
+    service:
+     name: httpd
+     state: started    
+     enabled: yes
+
+
+  - name: Install PHP and MySQL packages for wordpress
+    dnf:
+      name:
+        - wget
+        - php-fpm
+        - php-mysqli
+        - php-json
+        - php
+        - php-devel
+        

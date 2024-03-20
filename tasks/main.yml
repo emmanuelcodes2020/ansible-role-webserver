@@ -1,0 +1,4 @@
+---
+# tasks file for webserver-role
+  - name: Install httpd, php and MySQL packages
+    include_tasks: webserver.yml
